@@ -14,14 +14,16 @@ public class Fight {
    
         while(true){
             //is the player dead
-            if(newPlayer.getDead()){
+            if(newPlayer.getHealth() <= 0){
                 System.out.println("you have been killed");
+                newPlayer.killPlayer();
                 break;
             }
 
             //is the enemy dead
-            if(newZombie.getDead()){
+            if(newZombie.getHealth() <= 0){
                 System.out.println("you have defeated the enemy.");
+                newZombie.killZombie();
                 break;
             }
             //player turn
@@ -47,6 +49,7 @@ public class Fight {
 
             //player stats
             System.out.println(newPlayer);
+            System.out.println(" the enemey has: " + newZombie.getHealth() + " health");
         } 
         
    } 

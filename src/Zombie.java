@@ -4,8 +4,8 @@ public class Zombie {
     private boolean dead;
 
     public Zombie(player newPlayer){
-        health = (newPlayer.getLevel()/2)*(int)(Math.random()*5);
-        attack = (newPlayer.getLevel()/2)*(int)(Math.random()*5);
+        health = (newPlayer.getLevel())*(int)(Math.random()*5 + 1);
+        attack = (newPlayer.getLevel())*(int)(Math.random()*5 + 1);
         dead = false;
     }
 
